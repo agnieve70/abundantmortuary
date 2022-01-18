@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import AdminScreen from "./screens/AdminScreen";
+import AgentScreen from "./screens/AgentScreen";
+import ProfilingScreen from "./screens/ProfilingScreen";
+import CollectorScreen from "./screens/CollectorScreen";
+import CollectionScreen from "./screens/CollectionScreen";
+import ReportScreen from "./screens/ReportScreen";
+import LoginScreen from "./screens/LoginScreen";
+import AboutScreen from "./screens/AboutScreen";
+import RegisterScreen from "./screens/RegisterScreen";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router basename={process.env.PUBLIC_URL}>
+        <Routes>
+          <Route path="/" element={<LoginScreen />} />
+          <Route path="/register" element={<RegisterScreen />} />
+          <Route path="/admin" element={<AdminScreen />} />
+          <Route path="/agent" element={<AgentScreen />} />
+          <Route path="/profiling" element={<ProfilingScreen />} />
+          <Route path="/collector" element={<CollectorScreen />} />
+          <Route path="/collection" element={<CollectionScreen />} />
+          <Route path="/report" element={<ReportScreen />} />
+          <Route path="/about" element={<AboutScreen />} />
+        </Routes>
+    </Router>
     </div>
   );
 }
