@@ -75,7 +75,7 @@ export const register = (name, email, contact, gender, birthdate, password, pass
         
         const {data} = await axios.post(BASE_URL+'/register',
         {
-            'name':name, 'email':name,
+            'name':name, 
             'email':email,
             'contact':contact,
             'gender': gender,
