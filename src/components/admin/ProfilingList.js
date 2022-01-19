@@ -24,6 +24,10 @@ function ProfilingList(props) {
         Header: 'Personal',
         columns: [
           {
+            Header: 'Pf No.',
+            accessor: 'pf_no',
+          },
+          {
             Header: 'Name',
             accessor: 'name',
           },
