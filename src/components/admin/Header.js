@@ -2,11 +2,16 @@ import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import {LinkContainer} from 'react-router-bootstrap';
 import {USER_TOKEN} from '../../constants/tokenConstant';
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { logout } from "../../actions/userActions";
 
 function Header() {
-
-    const logout = () => {
-        alert("logout");
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
+    const logoutHandler = () => {
+            dispatch(logout());
+            navigate("/");
     }
     return (
          <Navbar bg="info" variant="dark" expand="lg" className="mb-5">
@@ -35,7 +40,7 @@ function Header() {
                     <LinkContainer to='/register'>
                         <Nav.Link href="#link">USER ROLE</Nav.Link>
                     </LinkContainer>
-                    <Nav.Link href="#link" onClick={()=> logout()}>LOGOUT</Nav.Link>
+                    <Nav.Link href="#link" onClick={()=> logoutHandler()}>LOGOUT</Nav.Link>
                 </Nav>
                 </Navbar.Collapse>
             </Container>

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { Form, Spinner, Row, Col, Button, Alert } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import {login} from '../actions/userActions';
@@ -14,6 +14,12 @@ function LoginScreen(props) {
 
     const userLogin = useSelector(state => state.userLogin);
     const {loading, error, userInfo} = userLogin;
+
+    useEffect(() => {
+        if(localStorage.getItem('amUserInfo')){
+            navigate("/admin");
+        }
+    }, []);
 
     const submitHandler = (e) => 
     {

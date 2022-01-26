@@ -39,6 +39,7 @@ function Step2(props) {
             else {
                  if(props.planholder_id)
                 {
+                    console.log(props.data_id)
                     dispatch(update_data(data_info, props.data_id)).then(()=>{
                         props.setStep(props.step+1)
                     });
