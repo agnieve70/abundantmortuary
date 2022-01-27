@@ -14,7 +14,7 @@ function App() {
     <div className="App">
       <Router basename={process.env.PUBLIC_URL}>
         <Routes>
-          <Route path="/" element={<RegisterScreen />} />
+          <Route path="/" element={<LoginScreen />} />
           <Route path="/register" element={<RegisterScreen />} />
           <Route path="/admin" element={<AdminScreen />} />
           <Route path="/agent" element={<AgentScreen />} />
