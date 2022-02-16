@@ -12,6 +12,10 @@ import {
 } from "./reducers/agentReducers";
 
 import {
+  reportsFilteredReducer,
+} from "./reducers/reportReducers";
+
+import {
   collectorsListReducer,
 } from "./reducers/collectorReducers";
 
@@ -40,6 +44,7 @@ const reducer = combineReducers({
   personalInfoSave:personalInfoSaveReducer,
   personalInfoUpdate:personalInfoUpdateReducer,
   dataSave:dataSaveReducer,
+  reportsFiltered:reportsFilteredReducer,
   dataUpdate:dataUpdateReducer,
   beneficiaryList:beneficiaryListReducer,
   beneficiarySave:beneficiarySaveReducer,
