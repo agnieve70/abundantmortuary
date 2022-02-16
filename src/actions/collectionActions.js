@@ -27,7 +27,7 @@ export const get_collection_by_planholder = (planholder_id) => async (dispatch) 
             headers: {
                 'Content-type':'application/json',
                 'Accept': "application/json",
-                Authorization: USER_TOKEN,
+                'Authorization': USER_TOKEN,
             }
         };
 

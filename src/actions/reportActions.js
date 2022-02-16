@@ -19,8 +19,8 @@ export const get_collectors_list = (dates) => async (dispatch) => {
     const config = {
       headers: {
         "Content-type": "application/json",
-        Accept: "application/json",
-        Authorization: USER_TOKEN,
+        "Accept": "application/json",
+        "Authorization": USER_TOKEN,
       },
     };
 

@@ -44,8 +44,8 @@ export const planholder_list = () => async (dispatch) => {
     const config = {
       headers: {
         "Content-type": "application/json",
-        Accept: "application/json",
-        Authorization: USER_TOKEN,
+        "Accept": "application/json",
+        "Authorization": USER_TOKEN,
       },
     };
 
