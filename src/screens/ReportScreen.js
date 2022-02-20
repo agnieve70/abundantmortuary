@@ -34,6 +34,11 @@ function ReportScreen() {
             filter: "fuzzyText",
           },
           {
+            Header: "Date Collected",
+            accessor: "date_collected",
+            filter: "fuzzyText",
+          },
+          {
             Header: "Planholder",
             accessor: "planholder",
             filter: "fuzzyText",
@@ -46,11 +51,6 @@ function ReportScreen() {
           {
             Header: "No. of Months Collected",
             accessor: "no_of_months_collected",
-            filter: "fuzzyText",
-          },
-          {
-            Header: "Date Collected",
-            accessor: "date_collected",
             filter: "fuzzyText",
           },
           {
@@ -75,10 +75,10 @@ function ReportScreen() {
           body: reports_filtered ? reports_filtered.length > -1 ? reports_filtered : [] : [],
           columns: [
             { header: "OR Number", dataKey: "or_number" },
+            { header: "Date Collect", dataKey: "date_collect" },
             { header: "Planholder", dataKey: "planholder" },
             { header: "Amount", dataKey: "amount" },
             { header: "No. of Months Collected", dataKey: "number_of_months_collected" },
-            { header: "Date Collect", dataKey: "date_collect" },
             { header: "Collector", dataKey: "collector" },
           ],
         });
