@@ -36,6 +36,10 @@ import { USER_TOKEN } from "../constants/tokenConstant";
  */
 
 export const planholder_list = () => async (dispatch) => {
+
+  const obj = JSON.parse(localStorage.getItem("amUserInfo"));
+  const token = obj ? `Bearer ${obj.data.access_token}` : "";
+
   try {
     dispatch({
       type: PLANHOLDERS_REQUEST,
@@ -45,7 +49,7 @@ export const planholder_list = () => async (dispatch) => {
       headers: {
         "Content-type": "application/json",
         "Accept": "application/json",
-        "Authorization": USER_TOKEN,
+        "Authorization": token,
       },
     };
 

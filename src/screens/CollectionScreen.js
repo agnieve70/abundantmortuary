@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import { Row, Col } from 'react-bootstrap';
 import CollectionForm from '../components/admin/CollectionForm';
 import ProfilingList from '../components/admin/ProfilingList';
@@ -10,30 +10,29 @@ function CollectionScreen() {
     const [profile, setProfile] = useState();
 
     return (
-        <>
+      <>
         <Header />
         <Row>
-            <Col md={12}>
-                {
-                    action  === "form"
-                    ?
-                        <CollectionForm
-                            profile={profile}
-                            setProfile={setProfile}
-                        />
-                    :
-                        <ProfilingList
-                            profile={profile}
-                            setProfile={setProfile}
-                            useFor={"collection"}
-                            action={action}
-                            setAction={setAction}
-                        />
-                }
-            </Col>
+          <Col md={12}>
+            {action === "form" ? (
+              <CollectionForm
+                profile={profile}
+                setProfile={setProfile}
+                setAction={setAction}
+              />
+            ) : (
+              <ProfilingList
+                profile={profile}
+                setProfile={setProfile}
+                useFor={"collection"}
+                action={action}
+                setAction={setAction}
+              />
+            )}
+          </Col>
         </Row>
-        </>
-    )
+      </>
+    );
 }
 
 export default CollectionScreen
