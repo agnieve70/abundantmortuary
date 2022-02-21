@@ -24,7 +24,7 @@ function ProfilingScreen() {
     return (
         <>
             <Header />
-            <Row>
+            <Row className='mt-5'>
                 <Col md={12}>
                     {
                         action === 'form'

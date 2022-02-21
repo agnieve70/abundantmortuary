@@ -55,10 +55,12 @@ function CollectionForm(props) {
           <Form onSubmit={(e) => handleAddCollection(e)}>
             <Row>
               <Col md={12}>
-                <Button size="sm" onClick={() => props.setAction('list')}>
+               <div className='my-3'>
+               <Button size="sm" onClick={() => props.setAction('list')}>
                   <i className="fa fa-arrow-left"></i> Back to Planholders
                   List
                 </Button>
+               </div>
                 <p>
                   Name : <b>{props.profile.name}</b>
                 </p>

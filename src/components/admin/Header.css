@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Quicksand:wght@400;700&display=swap");
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+.nopadding{
+  margin: 0;
+  padding: 0;
+}
+.navbar.bg-info {
+  border-top: 1px solid #9999;
+  background-color: #f8f9fa !important;
+  border-bottom: 1px solid #9999;
+  padding: 0;
+}
+.headercontact {
+  padding: 5rem 0;
+  position: relative;
+}
+.headercontact p {
+  font-size: 14px;
+}
+.headercontact img {
+  max-width: 275px;
+  max-height: 450px;
+  padding: 0;
+}
+.header-detail {
+  text-align: right;
+  color: #999999;
+}
+.li-item {
+  border-right: 1px solid #dddddd;
+  float: left;
+}
+nav {
+  border-top: 1px solid #9999;
+  background-color: #f8f9fa !important;
+  border-bottom: 1px solid #9999;
+  padding: 0;
+}
+.abundant-headerdetails{
+  display: inline-block; 
+  text-align: center;
+}
+a.nav-link {
+  padding: 25px 20px;
+  text-transform: uppercase;
+}
+.nav-link.active {
+  box-shadow: inset 0 4px 0 0 #0a9791;
+}

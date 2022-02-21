@@ -5,7 +5,7 @@ import { Row, Col, Button, Spinner, Alert } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import {planholder_list} from '../../actions/planholderActions';
 import { LinkContainer } from 'react-router-bootstrap';
-
+import addressbook from './images/addressbook.svg';
 function ProfilingList(props) {
    
     const dispatch = useDispatch();
@@ -87,9 +87,11 @@ function ProfilingList(props) {
             <Col md={8}>
               {
                 loading ?
-                  <Spinner animation="border" role="status">
+                 <div className='text-center' style={{margin:'5rem'}}>
+                    <Spinner animation="border" role="status">
                       <span className="visually-hidden">Loading...</span>
                   </Spinner>
+                 </div>
                 :
                 error ?
                   <Alert variant={'danger'}>
@@ -99,7 +101,7 @@ function ProfilingList(props) {
                 <>
                   {
                     props.useFor === "planholder" ?
-                    <Button onClick={()=>handleAddPlanHolder()}>Add Planholder</Button>:null
+                    <Button onClick={()=>handleAddPlanHolder()}> <i className="fas fa-user-edit mr-2"></i>ADD PLANHOLDER</Button>:null
                   }
                   <TableComponent data={planholders ? planholders : []} columns={columns}  />
                 </>
